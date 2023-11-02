@@ -17,13 +17,13 @@ export const SITE_METADATA = {
 
     // The following are subject to change. They are placeholders for now.
     // This project provide a default author content see src/content/authors/default.mdx, so these details are better to be inserted there.
-    author: 'John Doe',
-    mastodon: 'https://mastodon.social/@mastodonuser',
-    email: 'address@yoursite.com',
-    github: 'https://github.com',
+    author: 'Sam Dillenburg',
+    mastodon: 'https://mastodon.online/@hackbraten68',
+    email: 'sam.studi@gmail.com',
+    github: 'https://github.com/hackbraten68',
     twitter: 'https://twitter.com/Twitter',
     facebook: 'https://facebook.com',
-    youtube: 'https://youtube.com',
+    youtube: 'https://www.youtube.com/@MosDev__',
     linkedin: 'https://www.linkedin.com',
 
     // These are not supported yet
