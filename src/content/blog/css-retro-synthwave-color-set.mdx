@@ -10,15 +10,103 @@ summary: Color Set (#hex) inspired by Retro/Synthwave videos i've been watching.
 authors: ['samueldillenburg']
 ---
 
-# 5 of them are enough
-
-![GitHub Logo](https://github.com/hackbraten68/tailwind-astro-starting-blog/blob/main/public/static/images/blog/header/synthwave_header.jpg)
+![Image by Shawn Suttle from Pixabay](public\static\images\blog\header\synthwave_header.jpg)
 
 so i am listening to a lot of synthwave music streams while coding, and i am just fascinated with the artwork for most of those videos. i realized that this blog already has some known color schemes which i can work with and expand this a little bit more. let's see how much retro i can get into this thing. here are my colors so far for the first set:
 
+![Retro Color Set on coolors.co](public\static\images\blog\retro_color_palette.png)
+
+here is the direct link to it: 
+[Coolors](https://coolors.co/ff1493-8a2be2-38eff5-00008b-800080)
+
 ```
-- Item 1
-- Item 2
-  - Item 2a
-  - Item 2b
+- #800080 Purple
+- #00008b Navy Blue
+- #8a2be2 Blue Violet
+- #38eff5 Aqua
+- #ff1493 Deeppink *obviously*
+```
+
+## Let's make some gradients, because we all love them right ?! 🌊🍇🍧🌺
+
+okay, now let's see how these colors could nicely work together as a linear-gradient. i mostly use [cssgradient.io](https://cssgradient.io/), so you guys can freak out by yourself with these colors.
+
+### Three-colored
+
+#### Deeppink -> Blue Violet -> Black
+![deeppink to blue violet to black](public\static\images\blog\pink-blueviolet-black.png)
+
+```javascript
+background: rgb(255,20,147);
+background: linear-gradient(90deg, rgba(255,20,147,1) 0%, rgba(138,43,226,1) 50%, rgba(0,0,0,1) 100%);
+```
+
+#### Deeppink -> Aqua -> Navy Blue
+![deeppink to aqua to blue navy](public\static\images\blog\deeppink-aqua-navyblue.png)
+
+```javascript
+background: rgb(255,20,147);
+background: linear-gradient(90deg, rgba(255,20,147,1) 0%, rgba(56,239,245,1) 66%, rgba(0,0,139,1) 100%);
+```
+
+#### Blue Violet -> Deeppink -> Aqua
+![deeppink to blue violet to black](public\static\images\blog\blueviolet-deeppink-aqua.png)
+
+```javascript
+background: rgb(138,43,226);
+background: linear-gradient(90deg, rgba(138,43,226,1) 0%, rgba(255,20,147,1) 33%, rgba(56,239,245,1) 100%);
+```
+
+#### Purple -> Blue Violet -> Deeppink 
+![purple to blue violet to deeppink](public\static\images\blog\purple-blueviolet-deeppink.png)
+
+```javascript
+background: rgb(138,43,226);
+background: linear-gradient(90deg, rgba(138,43,226,1) 0%, rgba(255,20,147,1) 33%, rgba(56,239,245,1) 100%);
+```
+
+### All possible combinations of these 5 basic colors
+
+yes, i was curious after creating 4 of those scenarios, so i did what every dude with an almost finished bachelor degree of engineering does - i asked chatGPT. of course, i learned that crap in higher maths class and shit, but boy i am too old for this crap ◡̈
+
+so anyhow, here are the results of a quiet simple prompt for chatGPT - for some reason it failed to give me the right answer for the first few attempts, but then i asked what could be in theory the possible combinations and after it got it right, asked again to show me all the combinations in a matrix. noice. 
+
+```javascript
+|               | #800080 (Purple) | #00008b (Navy Blue) | #8a2be2 (Blue Violet) | #38eff5 (Aqua) | #ff1493 (Deeppink) |
+|---------------|------------------|-----------------------|--------------------------|----------------|-------------------|
+| Combination 1 | #800080          | #00008b               | #8a2be2                  | #800080        | #00008b              |
+| Combination 2 | #800080          | #00008b               | #8a2be2                  | #8a2be2        | #38eff5              |
+| Combination 3 | #800080          | #00008b               | #8a2be2                  | #38eff5        | #ff1493              |
+| Combination 4 | #800080          | #00008b               | #38eff5                  | #8a2be2        | #ff1493              |
+| Combination 5 | #800080          | #8a2be2               | #38eff5                  | #800080        | #ff1493              |
+| Combination 6 | #00008b          | #8a2be2               | #38eff5                  | #00008b        | #800080              |
+| Combination 7 | #00008b          | #8a2be2               | #38eff5                  | #800080        | #8a2be2              |
+| Combination 8 | #00008b          | #8a2be2               | #38eff5                  | #ff1493        | #38eff5              |
+| Combination 9 | #8a2be2          | #38eff5               | #800080                  | #ff1493        | #00008b              |
+| Combination 10| #8a2be2          | #38eff5               | #00008b                  | #ff1493        | #800080              |
+
+```
+
+so i will continue with the colors in another post, and will make some changes on the current state of the css from this template ? haven't figured out yet how these assets here work, so we will see in the next one. enough for today.
+
+cheers,
+sam
+
+```
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠠⠤⠶⠞⢻⣿⡿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⢀⣠⣤⣤⣴⣶⣄⠀⢸⣿⠇⠻⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠰⠛⠛⠛⠻⠿⠿⣿⡇⠈⠉⠀⠀⠈⠻⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣄⡀⢹⣿
+⣿⣿⣿⣿⣿⣿⢿⢏⡜⢱⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠾⢿⣿⠻⣿⣿⣿
+⣿⣿⣿⣿⣿⡿⢸⡞⣠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠀⠀⠹⡍
+⣉⠙⠻⣿⣹⡇⡞⢰⡟⠀⣠⠤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹
+⠈⡹⣶⢆⣿⢱⡇⢸⡷⠋⣠⣤⡈⢇⠀⠀⠀⠀⠀⠀⠀⢀⡤⠄⢠⡀⠀⠀⠀⠈
+⠀⣇⣿⢸⣿⠸⣷⠀⢧⣾⠋⠈⠻⣾⣦⠀⠀⠀⠀⠀⣴⠋⢀⣦⠀⢿⠀⠀⠀⢀
+⡀⠈⣿⠘⢿⠄⠈⢀⠸⡏⠀⠀⢰⡇⡜⠀⠀⠀⠀⠀⠁⠀⠈⢸⠈⠀⠀⠀⠀⡼
+⣿⣷⣿⠀⠀⠀⠀⡌⠀⢧⣀⡴⠛⢁⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡇
+⣿⣿⣿⡇⠀⠀⠰⢰⠀⠀⠙⠃⢀⡾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⡇
+⣿⣿⣿⣷⠀⠀⠀⡸⠀⠀⠀⣠⣿⣿⣶⣤⣤⣀⡀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⡇
+⣿⣿⣿⠏⠀⠀⢀⡇⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⡞⠋⢸⣿⣿⣿⣿⡇
+⣿⡿⠃⠀⠐⠶⣿⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣞⢻⣿⣿⣿⣿⡇
+noice !
 ```
