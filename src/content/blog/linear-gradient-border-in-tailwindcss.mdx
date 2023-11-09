@@ -12,3 +12,40 @@ brainstorming
 - with arbitary []
 - as background image
 - somewhere in tailwindcss config
+
+```bash
+npm install @tailwindcss/gradient-borders
+
+```
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  // ...
+  plugins: [
+    require('@tailwindcss/gradient-borders'),
+    // ...
+  ],
+}
+```
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  // ...
+  theme: {
+    extend: {
+      gradientColors: {
+        'primary': ['#4F93CE', '#945ACB'],
+        'secondary': ['#F59E0B', '#D97706'],
+      },
+    },
+  },
+}
+```
+
+```html
+<div class="border-gradient-to-r-primary from-primary to-secondary border-2 p-4">
+  <!-- Your content goes here -->
+</div>
+```
